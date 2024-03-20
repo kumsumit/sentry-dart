@@ -79,7 +79,7 @@ Future<void> setupSentry(AppRunner appRunner, String dsn,
 }
 
 class MyApp extends StatefulWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   _MyAppState createState() => _MyAppState();
@@ -162,7 +162,7 @@ class MainScaffold extends StatelessWidget {
               child: const Text('Dart: try catch'),
             ),
             ElevatedButton(
-              onPressed: () => Scaffold.of(context).showBottomSheet<dynamic>(
+              onPressed: () => Scaffold.of(context).showBottomSheet(
                 (context) => const Text('Scaffold error'),
               ),
               child: const Text('Flutter error : Scaffold.of()'),
